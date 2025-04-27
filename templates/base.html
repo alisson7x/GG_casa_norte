@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compre produtos naturais na Casa do Norte: temperos, chás, castanhas e mais!"
+    />
+    <title>Casa do Norte</title>
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/customizado.css') }}"
+    />
+  </head>
+  <body>
+    <header class="topo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <h1>Casa do Norte</h1>
+        <p>Produtos Naturais – Direto da Terra para sua Casa 🌱</p>
+
+      </header>
+      <div class="menu">
+        <a href="{{ url_for('home') }}">Home page</a> 
+        <a href="{{ url_for('catalogo') }}">Ver Produtos</a>
+        <a href="{{ url_for('carrinho') }}">Ver Carrinho</a>
+        <a href="{{ url_for('pedidos') }}">Meus Pedidos</a>
+        
+      </div>
+
+      <main>
+        {% block main %}
+        {% endblock %}
+      </main>
+
+        
+    <!-- Logotipo do Criador -->
+    <a href="https://www.instagram.com/alisson.araujo_/">
+        <img src="{{url_for('static', filename= 'images/araujo.png')}}" 
+      alt="logo do Criador" 
+      class="araujo_logo">
+      </a>
+  </body>
+</html>

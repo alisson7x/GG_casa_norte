@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <body>
+    <section class="produtos">
+      <h2>Catálogo de Produtos</h2>
+      <div class="lista-produtos">
+        <!-- Produto 1 -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/150" alt="Pimenta do Reino" />
+          <h3>Pimenta do Reino</h3>
+          <p>100g de pimenta do reino moída. Sabor e aroma marcantes.</p>
+          <span class="preco">R$ 12,00</span>
+          <button onclick="adicionarAoCarrinho('Pimenta do Reino', 12.00)">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/150" alt="Chá de Camomila" />
+          <h3>Chá de Camomila</h3>
+          <p>20 sachês de chá 100% natural, calmante e aromático.</p>
+          <span class="preco">R$ 8,00</span>
+          <button onclick="adicionarAoCarrinho('Chá de Camomila', 8.00)">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/150" alt="Castanha-do-Pará" />
+          <h3>Castanha-do-Pará</h3>
+          <p>Pacote com 200g de castanhas-do-pará frescas e crocantes.</p>
+          <span class="preco">R$ 18,00</span>
+          <button onclick="adicionarAoCarrinho('Castanha-do-Pará', 18.00)">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+{% endblock %}

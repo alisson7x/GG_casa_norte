@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f4e3c1, #d3e4b0);
+  color: #333;
+}
+
+.pedidos h2 {
+  color: #2e6c3b;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.home h2 {
+  color: #2e6c3b;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.menu {
+  background-color: #000; /* fundo preto */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.menu a {
+  color: #00ff2f; /* laranja */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ff7b00; /* laranja mais escuro no hover */
+  transform: scale(1.1);
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* Logotipo da loja */
+.logo {
+  width: 140px;
+  border-radius: 100px;
+  border-style: dotted;
+}
+
+/* Logotipo do criador */
+.araujo_logo {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 40px auto 20px auto;
+}
+
+/* Cabeçalho */
+header.topo {
+  background-color: #3f8b4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header.topo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Conteúdo principal */
+main.conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Seção de produtos */
+.produtos {
+  flex: 2;
+  min-width: 300px;
+}
+
+.produtos h2 {
+  margin-bottom: 20px;
+  color: #2e6c3b;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card do produto */
+.produto {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #3f8b4f;
+}
+
+.produto p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.produto .preco {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #cd6e01;
+}
+
+.produto button {
+  margin-top: 10px;
+  background-color: #3f8b4f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.produto button:hover {
+  background-color: #2d6c38;
+}
+
+/* Carrinho */
+aside.carrinho {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+aside.carrinho h2 {
+  color: #2e6c3b;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+#listaCarrinho {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#listaCarrinho li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+#totalCarrinho {
+  font-weight: bold;
+  color: #3f8b4f;
+}
+
+/* Inputs e botão de frete */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+aside.carrinho button {
+  background-color: #cd6e01;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+aside.carrinho button:hover {
+  background-color: #8a4600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  main.conteudo {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .produto img {
+    max-height: 140px;
+  }
+
+  header.topo h1 {
+    font-size: 2rem;
+  }
+
+  aside.carrinho {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

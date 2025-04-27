@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <body>
+        <div>
+            <aside class="carrinho">
+                <h2>🛒 Carrinho</h2>
+                <ul id="listaCarrinho"></ul>
+                <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
+                <input type="text" id="cep" placeholder="Digite seu CEP" />
+                <button onclick="calcularFrete()">Calcular Frete</button>
+                <p id="freteResultado" aria-live="polite"></p>
+                <button onclick="finalizarCompra()">Finalizar Compra</button>
+            </aside>
+        </div>
+    </body>
+
+    {% endblock %}
+ 
