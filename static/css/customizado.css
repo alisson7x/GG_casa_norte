@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 .menu {
-  background-color: #000; /* fundo preto */
+  background-color: #2a691d8c; /* fundo preto */
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -31,11 +31,12 @@ body {
 }
 
 .menu a {
-  color: #00ff2f; /* laranja */
+  color: #ece96bc4; /* laranja */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
+  border-color: #ccc;
 }
 
 .menu a:hover {
@@ -127,7 +128,7 @@ main.conteudo {
 }
 
 .produto img {
-  width: 100%;
+  width: 80%;
   max-height: 160px;
   object-fit: contain;
   border-radius: 8px;
@@ -164,6 +165,7 @@ main.conteudo {
 
 .produto button:hover {
   background-color: #2d6c38;
+  transform: scale(1.05); /* Dá uma leve aumentada no botão */
 }
 
 /* Carrinho */
