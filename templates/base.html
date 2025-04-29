@@ -3,15 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Compre produtos naturais na Casa do Norte: temperos, chás, castanhas e mais!" />
+    <meta
+      name="description"
+      content="Compre produtos naturais na Casa do Norte: temperos, chás, castanhas e mais!"
+    />
     <title>Casa do Norte</title>
-    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/customizado.css') }}" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/logo.png') }}"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/customizado.css') }}"
+    />
   </head>
-  
+
   <body>
     <header class="topo">
-      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Casa do Norte" class="logo" />
+      <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="Logo Casa do Norte"
+        class="logo"
+      />
       <h1>Casa do Norte</h1>
       <p>Produtos Naturais – Direto da Terra para sua Casa 🌱</p>
     </header>
@@ -23,15 +37,17 @@
       <a href="{{ url_for('pedidos') }}">Meus Pedidos</a>
     </nav>
 
-    <main>
-      {% block main %}
-      {% endblock %}
-    </main>
+    <main>{% block main %} {% endblock %}</main>
 
     <footer class="rodape">
-      <a href="https://www.instagram.com/alisson.araujo_/" target="_blank">
-        <img src="{{ url_for('static', filename='images/araujo.png') }}" alt="Logo do Criador" class="araujo_logo" />
-      </a>
+      <p>&copy; 2025 Casa do Norte - Todos os direitos reservados.</p>
+      <p>
+        Desenvolvido por:
+        <a href="https://www.instagram.com/alisson.araujo_/" target="_blank">
+          <img src="{{url_for('static', filename='images/araujo.png')}}" alt="Logo do Criador" class="araujo_logo" />
+        </a>
+      </p>
     </footer>
+    
   </body>
 </html>
